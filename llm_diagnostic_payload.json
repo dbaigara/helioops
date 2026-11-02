@@ -1,0 +1,76 @@
+{
+  "test_metadata": {
+    "test_bench": "EV Powertrain & Battery Pack Stress Rig #4",
+    "sample_rate_hz": 100,
+    "duration_seconds": 1000.0,
+    "total_samples": 100000
+  },
+  "channel_statistics": {
+    "voltage_v": {
+      "mean": 398.26,
+      "min": 366.6,
+      "max": 399.98,
+      "z_max": 92.0
+    },
+    "vibration_g": {
+      "mean": 0.0,
+      "std": 0.19,
+      "min": -4.37,
+      "max": 4.01,
+      "z_max": 38.1
+    },
+    "temperature_c": {
+      "mean": 25.21,
+      "max": 44.22,
+      "std": 2.37,
+      "z_max": 117.6
+    },
+    "current_a": {
+      "mean": 38.42,
+      "max": 212.73,
+      "std": 36.09
+    }
+  },
+  "detected_anomalies": [
+    {
+      "channel": "voltage_v",
+      "start_time": 28.4,
+      "end_time": 28.75,
+      "duration_ms": 350.0,
+      "peak_time": 28.58,
+      "peak_value": 366.6,
+      "peak_sigma": 92.0,
+      "severity": "CRITICAL"
+    },
+    {
+      "channel": "temperature_c",
+      "start_time": 54.34,
+      "end_time": 62.54,
+      "duration_ms": 8200.1,
+      "peak_time": 55.76,
+      "peak_value": 31.94,
+      "peak_sigma": 117.6,
+      "severity": "CRITICAL"
+    },
+    {
+      "channel": "vibration_g",
+      "start_time": 72.0,
+      "end_time": 75.0,
+      "duration_ms": 3000.1,
+      "peak_time": 74.02,
+      "peak_value": -4.36,
+      "peak_sigma": 38.1,
+      "severity": "CRITICAL"
+    }
+  ],
+  "required_output_schema": {
+    "verdict": "PASS | CONDITIONAL_PASS | FAIL",
+    "executive_summary": "string",
+    "root_cause_analysis": [
+      "string"
+    ],
+    "recommended_actions": [
+      "string"
+    ]
+  }
+}
